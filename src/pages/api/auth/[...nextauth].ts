@@ -7,8 +7,9 @@ export const authOptions = {
         TodoistProvider({
             clientId: process.env.TODOIST_CLIENT_ID || 'UNDEFINED',
             clientSecret: process.env.TODOIST_CLIENT_SECRET || 'UNDEFINED'
-        })
+        }),
     ],
+    secret: process.env.SECRET || 'TopSecret',
 }
 
 export default NextAuth(authOptions)
